@@ -16,8 +16,8 @@ config_manager = RedisConfigManager()
 
 outbound_call = OutboundCall(
     base_url=BASE_URL,
-    to_phone="+15555555555",
-    from_phone="+15555555555",
+    to_phone=os.environ["RECIPIENT_NUMBER"]
+    from_phone=["OUTBOUND_CALLER_NUMBER"]
     config_manager=config_manager,
     agent_config=SpellerAgentConfig(generate_responses=False),
 )
